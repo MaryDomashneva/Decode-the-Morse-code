@@ -5,18 +5,21 @@ function Decoder() {
 }
 
 Decoder.prototype.decode = function(string) {
-  var helper = new DecoderHelper()
   var strinsArray = string.split(' ')
-  var code = helper.morseCode()
-  var i;
-  for (i = 0; i < strinsArray.length; i++) {
-    this.wordArray.push(code[strinsArray[i]]);
-
-  };
-  return this.wordArray
+  this._arrayIterator(strinsArray)
 };
 
 Decoder.prototype.makeString = function(array) {
   var resultString = array.join('')
   return resultString
+}
+
+Decoder.prototype._arrayIterator = function(array) {
+  var i;
+  var helper = new DecoderHelper()
+  var code = helper.morseCode()
+  for (i = 0; i < array.length; i++) {
+    this.wordArray.push(code[array[i]]);
+  };
+  return this.wordArray
 }
