@@ -15,3 +15,8 @@ Decoder.prototype.decode = function(string) {
   };
   return this.wordArray
 };
+
+Decoder.prototype.makeString = function(array) {
+  var resultString = array.join('')
+  return resultString
+}

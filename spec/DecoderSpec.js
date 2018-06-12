@@ -25,7 +25,7 @@ describe('Decoder', function() {
     from array of letters', function() {
       var letters = ['A', 'B', ' ', 'C']
       decoder.makeString(letters);
-      expect(  decoder.makeString(letters)).toEqual('AB C');
+      expect(decoder.makeString(letters)).toEqual('AB C');
     });
   });
 });
