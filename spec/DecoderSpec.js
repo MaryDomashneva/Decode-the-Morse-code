@@ -19,4 +19,13 @@ describe('Decoder', function() {
       expect(decoder.wordArray).toEqual(['A', 'B', ' ', 'C']);
     });
   });
+
+  describe('#makeString', function() {
+    it('returns string\
+    from array of letters', function() {
+      var letters = ['A', 'B', ' ', 'C']
+      decoder.makeString(letters);
+      expect(  decoder.makeString(letters)).toEqual('AB C');
+    });
+  });
 });
