@@ -1,6 +1,6 @@
 'use strict';
 
-describe("Decoder", function() {
+describe('Decoder', function() {
   var decoder;
 
   beforeEach(function() {
@@ -14,9 +14,9 @@ describe("Decoder", function() {
   describe('#decode', function() {
     it('returns array of\
     letters', function() {
-      var a = '.-'
-      decoder.decode(a);
-      expect(decoder.wordArray).toEqual(['A']);
+      var string = '.- -...  -.-.'
+      decoder.decode(string);
+      expect(decoder.wordArray).toEqual(['A', 'B', ' ', 'C']);
     });
   });
 });

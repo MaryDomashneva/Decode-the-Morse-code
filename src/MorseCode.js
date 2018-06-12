@@ -32,5 +32,6 @@ DecoderHelper.prototype.morseCode = function() {
   morseCode['-.--'] = 'Y'
   morseCode['--..'] = 'Z'
   morseCode['...---...'] = 'SOS'
+  morseCode[''] = ' '
   return morseCode
 };
