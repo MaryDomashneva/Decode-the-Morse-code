@@ -14,9 +14,16 @@ describe('Decoder', function() {
   describe('#decode', function() {
     it('returns array of\
     letters', function() {
-      var string = '.- -...  -.-.'
+      var string = '.- -...   -.-.'
       decoder.decode(string);
       expect(decoder.wordArray).toEqual(['A', 'B', ' ', 'C']);
+    });
+
+    it('returns array of\
+    letters #2', function() {
+      var string = '.... . -.--   .--- ..- -.. .'
+      decoder.decode(string);
+      expect(decoder.wordArray).toEqual(['H', 'E', 'Y', ' ', 'J', 'U', 'D', 'E']);
     });
   });
 

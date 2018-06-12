@@ -19,7 +19,12 @@ Decoder.prototype._arrayIterator = function(array) {
   var helper = new DecoderHelper()
   var code = helper.morseCode()
   for (i = 0; i < array.length; i++) {
-    this.wordArray.push(code[array[i]]);
+    if (array[i] === '') {
+      this.wordArray.push(' ');
+      i += 1
+    } else {
+      this.wordArray.push(code[array[i]]);
+    };
   };
   return this.wordArray
 }
